@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/test
+    initialization-mode: always
+    platform: postgresql
+    username: postgres
+    password: super
+
+logging:
+  level:
+    org.springframework.jdbc.core: TRACE
