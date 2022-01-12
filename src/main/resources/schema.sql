@@ -13,7 +13,17 @@ CREATE TABLE IF NOT EXISTS users (
 
 CREATE TABLE IF NOT EXISTS answer (
 	id bigint GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
-	poll_id bigint REFERENCES poll(id) NOT NULL,
-	user_id text REFERENCES users(id) NOT NULL,
-	answer jsonb NOT NULL
+	poll_id bigint NOT NULL,
+	user_id text NOT NULL,
+	answer jsonb NOT NULL,
+
+	CONSTRAINT poll_id_fk
+	    FOREIGN KEY(poll_id)
+        REFERENCES poll(id)
+    	ON DELETE CASCADE,
+
+    CONSTRAINT user_id_fk
+        FOREIGN KEY(user_id)
+        REFERENCES users(id)
+        ON DELETE CASCADE
 );
