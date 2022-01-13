@@ -85,7 +85,9 @@ Request Body:
     "description": "Test",
     "end_at": "2022-01-01T00:00:01"
 }
+```
 Result:
+```json5
 {
         "id": {pollId},
         "title": "Test",
