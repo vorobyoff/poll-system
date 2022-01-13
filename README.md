@@ -101,5 +101,5 @@ Result:
         }
 }
 ```
-DELETE /polls/{pollId}/delete - removes poll with the given id
+DELETE /polls/{pollId}/delete - removes poll with the given id \
 Result: number of removed rows
